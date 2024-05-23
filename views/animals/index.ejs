@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals</title>
+</head>
+<body>
+    <h1>All Animals</h1>
+    <div>
+        <a href="/animals/new"><button>Add pet</button></a>
+    </div>
+    <ul>
+        <% for(let animal of animals) {%>
+            <li><a href="/animals/<%=animal._id%>"><%=animal.name%></a></li>
+            <% } %>
+    </ul>
+</body>
+</html>

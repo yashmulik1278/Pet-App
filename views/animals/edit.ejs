@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit pet info</title>
+</head>
+<body>
+    <h1>Edit pet information</h1>
+    <form action="/animals/<%=animal._id%>?_method=PUT" method="POST">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="animal[name]" id="name" value="<%=animal.name%>">
+        </div>
+        <div>
+            <label for="animal_type">Pet type</label>
+            <input type="text" name="animal[animal_type]" id="animal_type" value="<%=animal.animal_type%>">
+        </div>
+        <div>
+            <label for="breed">Breed</label>
+            <input type="text" name="animal[breed]" id="breed" value="<%=animal.breed%>">
+        </div>
+        <button>Update Pet</button>
+    </form>
+    <a href="/animals/<%=animal._id%>"><button>Back to Pet</button></a>
+</body>
+</html>
